@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0;}
+
+header {
+    background-image: linear-gradient(to right, aquamarine , blue);
+    text-align: right;
+    padding-right: 10%;
+    height: 5vh;
+}
