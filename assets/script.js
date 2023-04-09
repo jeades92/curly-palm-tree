@@ -76,8 +76,12 @@ function displayWeather(weatherData) {
       // Convert the temperature value from Kelvin to Fahrenheit
       var tempF = (weatherData.list[i].main.temp - 273.15) * 1.8 + 32;
 
+      var iconCode = weatherData.list[i].weather[0].icon;
+      var iconUrl = 'http://openweathermap.org/img/w/' + iconCode + '.png';
+
       forecastHtml += '<div class="col-md-2 card bg-primary text-white p-2">';
       forecastHtml += '<h5>' + new Date(weatherData.list[i].dt_txt).toLocaleDateString() + '</h5>';
+      forecastHtml += '<img src="' + iconUrl + '" alt="' + weatherData.list[i].weather[0].description + '">';
       forecastHtml += '<h6>' + weatherData.list[i].weather[0].description + '</h6>';
       forecastHtml += '<div>Temp: ' + tempF.toFixed(2) + '&deg;F</div>'; // Display the temperature in Fahrenheit
       forecastHtml += '<div>Humidity: ' + weatherData.list[i].main.humidity + '%</div>';
@@ -90,4 +94,11 @@ function displayWeather(weatherData) {
 
 
 
+
 searchForm.addEventListener('submit', formSubmitHandler);
+recentSearches.addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    var city = event.target.textContent;
+    getWeather(city);
+  }
+});

@@ -1,7 +1,7 @@
 *{margin: 0; padding: 0;}
 
 :root {
-    --primary: #0096FF;
+    --primary: #F3D677;
     --secondary: #9caea9;
     --tertiary: #788585;
     --light-dark: #6f6866;
@@ -510,3 +510,8 @@ header {
     height: 5%;
 }
 
+.recent li:hover {
+    cursor: grab;
+    color:white;
+  }
+  
