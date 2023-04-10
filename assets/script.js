@@ -25,7 +25,7 @@ var formSubmitHandler = function (event) {
 }
 
 var getWeather = function (city) {
-  var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=9a7846c4d42fa23a212917672d587d16"
+  var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=9a7846c4d42fa23a212917672d587d16"
 
   fetch(apiUrl)
     .then(function (response) {
