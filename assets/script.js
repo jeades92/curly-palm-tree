@@ -1,4 +1,3 @@
-// var APIKey = '9a7846c4d42fa23a212917672d587d16';
 var searchForm = document.querySelector('#search-form');
 var input = document.querySelector('#input');
 var recentSearches = document.querySelector('.recent');
@@ -6,17 +5,6 @@ var weatherToday = document.querySelector('#weather-today');
 var forecast = document.querySelector('#forecast');
 
 var city;
-// HOW TO FORMAT FETCH REQUEST:
-
-// var apiUrl = 'SOME_URL';
-
-// fetch(apiUrl)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//   })
 
 var formSubmitHandler = function (event) {
   event.preventDefault();
